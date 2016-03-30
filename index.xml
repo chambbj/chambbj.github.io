@@ -17,7 +17,7 @@
       <guid>http://chambbj.github.io/publications/</guid>
       <description>
 
-&lt;h1 id=&#34;print:480c4de99851329b51acecc000e2e84f&#34;&gt;Print&lt;/h1&gt;
+&lt;h2 id=&#34;print:480c4de99851329b51acecc000e2e84f&#34;&gt;Print&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:ULOm3_A8WrAC&#34;&gt;B. Chambers, J. Durand, N. Gans, and S. Hutchinson, “Dynamic feature point allocation using multiresolutional critical-point filters,” in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504–509.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -31,9 +31,9 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:u-x6o8ySG0sC&#34;&gt;R. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, “Efficient structures for image decomposition using directional filter banks,” in Proc. SPIE 6566, 65660Y, Apr. 2007.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;online:480c4de99851329b51acecc000e2e84f&#34;&gt;Online&lt;/h1&gt;
+&lt;h2 id=&#34;online:480c4de99851329b51acecc000e2e84f&#34;&gt;Online&lt;/h2&gt;
 
-&lt;h2 id=&#34;pdal:480c4de99851329b51acecc000e2e84f&#34;&gt;PDAL&lt;/h2&gt;
+&lt;h3 id=&#34;pdal:480c4de99851329b51acecc000e2e84f&#34;&gt;PDAL&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.pdal.io/tutorial/using.html&#34;&gt;Using PDAL with CMake&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -59,7 +59,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.pdal.io/tutorial/writing-writer.html&#34;&gt;Writing a writer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;pcl:480c4de99851329b51acecc000e2e84f&#34;&gt;PCL&lt;/h2&gt;
+&lt;h3 id=&#34;pcl:480c4de99851329b51acecc000e2e84f&#34;&gt;PCL&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://pointclouds.org/documentation/tutorials/progressive_morphological_filtering.php#progressive-morphological-filtering&#34;&gt;Identifying ground returns using ProgressiveMorphologicalFilter segmentation&lt;/a&gt;&lt;/li&gt;
