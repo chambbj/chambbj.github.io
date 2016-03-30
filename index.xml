@@ -6,8 +6,28 @@
     <description>Recent content on chambbj</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2016 15:42:47 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 29 Mar 2016 22:56:33 -0400</lastBuildDate>
     <atom:link href="http://chambbj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Publications</title>
+      <link>http://chambbj.github.io/publications/</link>
+      <pubDate>Tue, 29 Mar 2016 22:56:33 -0400</pubDate>
+      
+      <guid>http://chambbj.github.io/publications/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:ULOm3_A8WrAC&#34;&gt;B. Chambers, J. Durand, N. Gans, and S. Hutchinson, “Dynamic feature point allocation using multiresolutional critical-point filters,” in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504–509.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:d1gkVwhDpl0C&#34;&gt;B. Chambers, “Point- and window-based matching in images using critical-point filters,” M.S. thesis, Department of Electrical Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, 2004.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:u5HHmVD_uO8C&#34;&gt;B. Chambers, R. Ansari, D. Campbell, and W. Reynolds, “Wavelet-based target detection using multiscale directional analysis,” in Proc. SPIE 6566, 656608, Apr. 2007.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:YOwf2qJgpHMC&#34;&gt;B. Chambers and S. Hutchinson, “Integrated tracking and control using condensation-based critical-point matching,” in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2004, pp. 949–956.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:u-x6o8ySG0sC&#34;&gt;R. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, “Efficient structures for image decomposition using directional filter banks,” in Proc. SPIE 6566, 65660Y, Apr. 2007.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>
