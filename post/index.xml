@@ -6,16 +6,66 @@
     <description>Recent content in Posts on chambbj</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2016 15:12:44 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 04 Apr 2016 13:49:51 -0400</lastBuildDate>
     <atom:link href="http://chambbj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Introduction</title>
-      <link>http://chambbj.github.io/post/intro/</link>
-      <pubDate>Tue, 29 Mar 2016 15:12:44 -0400</pubDate>
+      <title>Crossing the Streams</title>
+      <link>http://chambbj.github.io/post/crossing-the-streams/</link>
+      <pubDate>Mon, 04 Apr 2016 13:49:51 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/post/intro/</guid>
-      <description>&lt;p&gt;Hello world!&lt;/p&gt;
+      <guid>http://chambbj.github.io/post/crossing-the-streams/</guid>
+      <description>&lt;p&gt;In January of this year, I was convinced to submit an abstract for &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt;. To my delight, my talk on &lt;a href=&#34;https://2016.foss4g-na.org/session/filtering-point-clouds-pdal-and-pcl&#34;&gt;Filtering point clouds with PDAL and PCL&lt;/a&gt; was accepted. This is a topic that is near and dear to me as an early adopter and contributor to both &lt;a href=&#34;http://pdal.io&#34;&gt;PDAL&lt;/a&gt; and &lt;a href=&#34;http://pointclouds.org&#34;&gt;PCL&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To this day, I find it quite convenient to leverage PCL&amp;rsquo;s extensive collection of &lt;a href=&#34;http://docs.pointclouds.org/1.7.2/modules.html&#34;&gt;modules&lt;/a&gt; when developing new approaches to processing point cloud data. Though the pace of PCL development has slowed (latest &lt;a href=&#34;https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.7.2&#34;&gt;release&lt;/a&gt;, &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/04/03/pcl-tutorial-and-3drp-pcl-workshop-at-ias-2014/&#34;&gt;workshop&lt;/a&gt; and &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/02/12/new-ocular-robotics-pcl-code-sprint/&#34;&gt;code sprint&lt;/a&gt; were all in 2014), there is still a wealth of algorithms that can aid in point cloud processing and analysis tasks. And it is easily &lt;a href=&#34;http://ns50.pointclouds.org/documentation/tutorials/writing_new_classes.php#writing-new-classes&#34;&gt;extensible&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;While point clouds can be derived from a &lt;a href=&#34;http://www.wired.com/2014/09/velodyne-lidar-self-driving-cars/&#34;&gt;number&lt;/a&gt; of &lt;a href=&#34;http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;amp;arnumber=4359315&amp;amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D4359315&#34;&gt;sources&lt;/a&gt;, my focus continues to be on point clouds collected by airborne lidar systems, where &lt;a href=&#34;http://www.asprs.org/Committee-General/LASer-LAS-File-Format-Exchange-Activities.html&#34;&gt;LAS&lt;/a&gt;, &lt;a href=&#34;http://www.laszip.org/&#34;&gt;LAZ&lt;/a&gt;, and the lesser known &lt;a href=&#34;https://nsgreg.nga.mil/doc/view?i=4202&#34;&gt;BPF&lt;/a&gt; formats are the norm. When it comes to reading/writing these (and other) formats, I&amp;rsquo;d rather not worry about the details, which is were PDAL shines. The PDAL &lt;a href=&#34;http://www.pdal.io/apps.html&#34;&gt;CLI&lt;/a&gt; allows me to effortlessly transcode between formats using the &lt;a href=&#34;http://www.pdal.io/apps.html#translate-command&#34;&gt;translate&lt;/a&gt; subcommand.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pdal translate -i input.bpf -o output.laz
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here we have converted a point cloud input written in the BPF format to a point cloud compressed as LAZ. But the fun doesn&amp;rsquo;t end there! We can also construct processing pipelines by inserting &lt;a href=&#34;http://www.pdal.io/stages/index.html#filters&#34;&gt;filters&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pdal translate -i input.bpf -o output.laz -f range \
+    --filters.range.limits=&amp;quot;Z(0:]&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This example performs the same format conversion, but uses a &lt;a href=&#34;http://www.pdal.io/stages/filters.range.html&#34;&gt;range&lt;/a&gt; filter to only pass points with Z values that are greater than 0.&lt;/p&gt;
+
+&lt;p&gt;Pipelines can also be specified as JSON, invoked using the &lt;a href=&#34;http://www.pdal.io/apps.html#pipeline-command&#34;&gt;pipeline&lt;/a&gt; subcommand.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pdal pipeline -i pipeline.json
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is the earlier transcoding example, specified using PDAL&amp;rsquo;s JSON &lt;a href=&#34;http://www.pdal.io/json_pipeline_specification.html#json-pipeline-specification&#34;&gt;specification&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;pipeline&amp;quot;:[
+    &amp;quot;input.bpf&amp;quot;,
+    &amp;quot;output.laz&amp;quot;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Similarly, the range filtering example is given by:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;pipeline&amp;quot;:[
+    &amp;quot;input.bpf&amp;quot;,
+    {
+      &amp;quot;type&amp;quot;:&amp;quot;filters.range&amp;quot;,
+      &amp;quot;limits&amp;quot;:&amp;quot;Z(0:]&amp;quot;
+    },
+    &amp;quot;output.laz&amp;quot;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This barely scratches the surface of what PDAL can do, but I think you get the idea.&lt;/p&gt;
+
+&lt;p&gt;While it was at first tempting to either 1) write format drivers for PCL or 2) write the processing algorithms for PDAL, both of these overlook a vital aspect of open source software: &lt;strong&gt;community&lt;/strong&gt;. If I were to go with option 1, I&amp;rsquo;d be on an island &amp;ndash; at least initially. The established PCL community already had a &lt;a href=&#34;http://pointclouds.org/documentation/tutorials/pcd_file_format.php&#34;&gt;format&lt;/a&gt;. The same was true for option 2. PDAL&amp;rsquo;s goal in life is really to focus on formats. Sure it would be nice to have many of the PCL algorithms living natively within PDAL, but I don&amp;rsquo;t want to spend the bulk of my time recoding a bunch of algorithms, and it didn&amp;rsquo;t seem there was a body of developers who wanted to jump in on the task with me.&lt;/p&gt;
+
+&lt;p&gt;No. What I really want to do is to come up with novel ways of processing the data. Sometimes this will mean writing (or implementing) a &lt;a href=&#34;http://www.pdal.io/tutorial/calculating-normalized-heights.html&#34;&gt;new&lt;/a&gt; or &lt;a href=&#34;http://www.pdal.io/tutorial/pcl_ground.html&#34;&gt;existing&lt;/a&gt; algorithm. Other times it&amp;rsquo;s simply a matter of wiring up existing algorithms in a &lt;a href=&#34;http://www.pdal.io/json_pipeline_specification.html#extended-examples&#34;&gt;new way&lt;/a&gt;. To that end, we&amp;rsquo;ve developed methods for incorporating PCL within PDAL, along with new and intuitive ways to interact with PDAL. Over the coming weeks, my hope is to be able to share with you a number of methods we have developed that bridge the PDAL-PCL divide.&lt;/p&gt;
 </description>
     </item>
     
