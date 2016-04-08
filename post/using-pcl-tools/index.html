@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="Using PCL Tools">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-04-08">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://chambbj.github.io/post/using-pcl-tools/">
+    <meta property="og:site_name" content="chambbj">
+    
+    <meta name="generator" content="Hugo 0.15" />
+    <title>Using PCL Tools &middot; chambbj</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="http://chambbj.github.io/css/style.css">
+    <link href="" rel="alternate" type="application/rss+xml" title="chambbj" />
+
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="http://chambbj.github.io/">Brad Chambers</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="http://chambbj.github.io/about">About</a></li>
+				
+					<li><a href="http://chambbj.github.io/">Blog</a></li>
+				
+					<li><a href="http://chambbj.github.io/publications">Publications</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h1 class="text-center"><a href="http://chambbj.github.io/">Brad Chambers</a></h1>
+		
+		
+		
+			<small class="text-center center-block">chambbj</small>
+		
+		
+		
+		<div id="social" class="text-center">
+			<a href="https://twitter.com/chambbj"><i class="fa fa-twitter fa-2x"></i></a>
+			<a href="https://www.linkedin.com/in/chambbj"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="https://github.com/chambbj"><i class="fa fa-github fa-2x"></i></a>
+			<a href="mailto:brad.chambers@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="http://chambbj.github.io/about">About</a>
+			
+				<a href="http://chambbj.github.io/">Blog</a>
+			
+				<a href="http://chambbj.github.io/publications">Publications</a>
+			
+		</div>
+	</div>
+</div>
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-8">
+
+<main>
+	<header>
+		<h1>Using PCL Tools</h1>
+	</header>
+
+	<article>
+		
+
+<p>In our introductory <a href="http://chambbj.github.io/post/crossing-the-streams/">post</a> on the topic, we expressed a desire to bring together <a href="http://pdal.io">PDAL</a> and <a href="http://pointclouds.org">PCL</a>. The first step that we took nearly four years ago was to create a <a href="https://github.com/PDAL/PDAL/commit/2ca4ec8556cad9445e87832c36d837e5eedacc1e">writer</a> for the PCD <a href="http://pointclouds.org/documentation/tutorials/pcd_file_format.php">format</a>. Jump forward two years, and we eventually <a href="https://github.com/PDAL/PDAL/commit/cc8e49869c0093b958939f4415b517b575e11ddc">added</a> PCL-backed drivers for both PCD <a href="http://www.pdal.io/stages/readers.pcd.html">reading</a> and <a href="http://www.pdal.io/stages/writers.pcd.html">writing</a>, adding support for not just ASCII data, but binary compressed data as well.</p>
+
+<p>With these drivers in place, we can now take the obvious first step for anybody experimenting with PDAL and PCL &ndash; just convert some data to PCD to use with PCL&rsquo;s command line <a href="https://github.com/PointCloudLibrary/pcl/tree/master/tools">tools</a>. Of course, with PDAL <a href="http://www.pdal.io/apps.html#translate-command">translate</a>, this is a breeze!</p>
+
+<h4 id="step-1-data-prep:851a220174b07844004569bd9c7b9363">Step 1: Data Prep</h4>
+
+<p>Let&rsquo;s begin by downloading some <a href="http://www.wvview.org/data/lidar/SouthernWV/Comprehensive/C23745.las">data</a> from <a href="http://www.wvview.org/">WVView</a>. We can transcode this to binary compressed PCD using the command:</p>
+
+<pre><code class="language-console">$ pdal translate C23745.las C23745.pcd --writers.pcd.compression=true
+</code></pre>
+
+<h4 id="step-2-outlier-removal:851a220174b07844004569bd9c7b9363">Step 2: Outlier Removal</h4>
+
+<p>Now, let&rsquo;s take a look at the point cloud using <code>pcl_viewer</code>.</p>
+
+<pre><code class="language-console">$ pcl_viewer C23745.pcd
+</code></pre>
+
+<p><img src="/images/screenshot-1460048615.png" style="width: 400px;"/></p>
+
+<p>The above view of the point cloud is taken by rotating the content on it&rsquo;s side (the default view is top-down), colorizing by elevation, and enlarging the point size slightly. It reveals an important aspect of the data: outliers. If you look closely, you may notice at least two outliers up in the air. Such outliers can adversely affect statistics (e.g., elevation range) and products (e.g., maximum Z grids). In the viewer, it has also skewed the color ramp (though a technique similar to contrast stretch could be used to scale the elevation color ramp more intelligently).</p>
+
+<p>No problem! We can continue with PCL tools, in particular <code>pcl_outlier_removal</code>. (Note: PCL currently supports two methods of outlier removal: statistical and radius. These may or may not be the right tool for any given application, and the parameters shown are just an example. The proper approach to outlier removal will depend on your data and application.)</p>
+
+<pre><code class="language-console">$ pcl_outlier_removal C23745.pcd C23745-filtered.pcd -method statistical -mean_k 8 -std_dev_mul 2.0
+Statistical Outlier Removal filtering of a point cloud. For more information, use: pcl_outlier_removal -h
+&gt; Loading C23745.pcd [done, 284 ms : 3080188 points]
+Available dimensions: x y z intensity rgba
+Computing filtered cloud from 3080188 points with mean_k 8, std_dev_mul 2.000000, inliers 0 ...[done, 5221 ms : 3079018 points, 1170 indices removed]
+&gt; Saving C23745-filtered.pcd [done, 315 ms : 3079018 points]
+</code></pre>
+
+<p>We turn once again to <code>pcl_viewer</code> to visualize the result.</p>
+
+<pre><code class="language-console">$ pcl_viewer C23745-filtered.pcd
+</code></pre>
+
+<p><img src="/images/screenshot-1460048598.png" style="width: 400px;"/></p>
+
+<p>As you can see, the outlier removal tool has removed the sky noise points, and the profile view appears to be much cleaner, with a more suitable color ramp.</p>
+
+<h4 id="step-3-subsampling:851a220174b07844004569bd9c7b9363">Step 3: Subsampling</h4>
+
+<p>PCL&rsquo;s voxel grid filter can be used to subsample the data, by replacing all points within a three-dimensional voxel with the centroid of the points in that voxel. The leaf size here specifies the edge length of the voxel. (Note: The choice to subsample in this manner is destructive, and the data density will be reduced. This may or may not be desirable depending on your application.)</p>
+
+<pre><code class="language-console">$ pcl_voxel_grid C23745-filtered.pcd C23745-vg.pcd -leaf 2.0,2.0,2.0
+Downsample a cloud using pcl::VoxelGrid. For more information, use: pcl_voxel_grid -h
+Using a leaf size of: 2.000000, 2.000000, 2.000000
+Filtering data on field: z between: -inf -&gt;inf
+&gt; Loading C23745-filtered.pcd [done, 288 ms : 3079018 points]
+Available dimensions: x y z intensity rgba
+&gt; Computing [done, 340 ms : 707478 points]
+&gt; Saving C23745-vg.pcd [done, 97 ms : 707478 points]
+</code></pre>
+
+<p>Below are before and after shots of the same viewpoint, showing the subsampled point cloud created by the voxel grid filter, which is composed of roughly 25% of the original number of points.</p>
+
+<p><img src="/images/screenshot-1460050782.png" style="width: 400px;"/></p>
+
+<p><img src="/images/screenshot-1460050617.png" style="width: 400px;"/></p>
+
+<h4 id="conclusion:851a220174b07844004569bd9c7b9363">Conclusion</h4>
+
+<p>Although this is a very loose integration of PCL and PDAL, we have begun to show how the two libraries can be used in tandem for data analysis and exploitation. In future posts, I will provide more details on how the conversions between PDAL and PCL take place and how PCL modules have been embedded directly into PDAL for more flexible and advanced processing workflows.</p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" http://chambbj.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75791009-1', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "http:\/\/chambbj.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="http://chambbj.github.io//js/App.js"></script>
+  
+</body>
+</html>
