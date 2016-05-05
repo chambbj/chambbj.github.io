@@ -6,8 +6,20 @@
     <description>Recent content on chambbj</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Apr 2016 12:42:19 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 05 May 2016 13:24:21 -0400</lastBuildDate>
     <atom:link href="http://chambbj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>FOSS4G-NA 2016</title>
+      <link>http://chambbj.github.io/post/foss4gna-2016/</link>
+      <pubDate>Thu, 05 May 2016 13:24:21 -0400</pubDate>
+      
+      <guid>http://chambbj.github.io/post/foss4gna-2016/</guid>
+      <description>&lt;p&gt;As &lt;a href=&#34;http://chambbj.github.io/post/crossing-the-streams/&#34;&gt;previously mentioned&lt;/a&gt;, I presented my talk on &amp;ldquo;Filtering point clouds with PDAL and PCL&amp;rdquo; at &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt; this morning. I&amp;rsquo;m happy to announce that the slides are now &lt;a href=&#34;http://bit.ly/1T3yhg3&#34;&gt;posted&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you made it out to Raleigh and saw the talk in person, thanks for attending! If not, a video of the talk should be posted in the near future. I&amp;rsquo;ll be sure to share the link as soon as it is ready.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Using PCL Tools</title>
