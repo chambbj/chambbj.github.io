@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>chambbj</title>
-    <link>http://chambbj.github.io/</link>
+    <link>https://chambbj.github.io/</link>
     <description>Recent content on chambbj</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 May 2016 13:24:21 -0400</lastBuildDate>
-    <atom:link href="http://chambbj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chambbj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>FOSS4G-NA 2016</title>
-      <link>http://chambbj.github.io/post/foss4gna-2016/</link>
+      <link>https://chambbj.github.io/post/foss4gna-2016/</link>
       <pubDate>Thu, 05 May 2016 13:24:21 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/post/foss4gna-2016/</guid>
-      <description>&lt;p&gt;As &lt;a href=&#34;http://chambbj.github.io/post/crossing-the-streams/&#34;&gt;previously mentioned&lt;/a&gt;, I presented my talk on &amp;ldquo;Filtering point clouds with PDAL and PCL&amp;rdquo; at &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt; this morning. I&amp;rsquo;m happy to announce that the slides are now &lt;a href=&#34;http://bit.ly/1T3yhg3&#34;&gt;posted&lt;/a&gt;.&lt;/p&gt;
+      <guid>https://chambbj.github.io/post/foss4gna-2016/</guid>
+      <description>&lt;p&gt;As &lt;a href=&#34;https://chambbj.github.io/post/crossing-the-streams/&#34;&gt;previously mentioned&lt;/a&gt;, I presented my talk on &amp;ldquo;Filtering point clouds with PDAL and PCL&amp;rdquo; at &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt; this morning. I&amp;rsquo;m happy to announce that the slides are now &lt;a href=&#34;http://bit.ly/1T3yhg3&#34;&gt;posted&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you made it out to Raleigh and saw the talk in person, thanks for attending! If not, a video of the talk should be posted in the near future. I&amp;rsquo;ll be sure to share the link as soon as it is ready.&lt;/p&gt;
 </description>
@@ -23,10 +23,10 @@
     
     <item>
       <title>Using PCL Tools</title>
-      <link>http://chambbj.github.io/post/using-pcl-tools/</link>
+      <link>https://chambbj.github.io/post/using-pcl-tools/</link>
       <pubDate>Fri, 08 Apr 2016 12:42:19 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/post/using-pcl-tools/</guid>
+      <guid>https://chambbj.github.io/post/using-pcl-tools/</guid>
       <description>
 
 &lt;p&gt;In our introductory &lt;a href=&#34;http://chambbj.github.io/post/crossing-the-streams/&#34;&gt;post&lt;/a&gt; on the topic, we expressed a desire to bring together &lt;a href=&#34;http://pdal.io&#34;&gt;PDAL&lt;/a&gt; and &lt;a href=&#34;http://pointclouds.org&#34;&gt;PCL&lt;/a&gt;. The first step that we took nearly four years ago was to create a &lt;a href=&#34;https://github.com/PDAL/PDAL/commit/2ca4ec8556cad9445e87832c36d837e5eedacc1e&#34;&gt;writer&lt;/a&gt; for the PCD &lt;a href=&#34;http://pointclouds.org/documentation/tutorials/pcd_file_format.php&#34;&gt;format&lt;/a&gt;. Jump forward two years, and we eventually &lt;a href=&#34;https://github.com/PDAL/PDAL/commit/cc8e49869c0093b958939f4415b517b575e11ddc&#34;&gt;added&lt;/a&gt; PCL-backed drivers for both PCD &lt;a href=&#34;http://www.pdal.io/stages/readers.pcd.html&#34;&gt;reading&lt;/a&gt; and &lt;a href=&#34;http://www.pdal.io/stages/writers.pcd.html&#34;&gt;writing&lt;/a&gt;, adding support for not just ASCII data, but binary compressed data as well.&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcl_viewer C23745.pcd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://chambbj.github.io/images/screenshot-1460048615.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chambbj.github.io/images/screenshot-1460048615.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;The above view of the point cloud is taken by rotating the content on it&amp;rsquo;s side (the default view is top-down), colorizing by elevation, and enlarging the point size slightly. It reveals an important aspect of the data: outliers. If you look closely, you may notice at least two outliers up in the air. Such outliers can adversely affect statistics (e.g., elevation range) and products (e.g., maximum Z grids). In the viewer, it has also skewed the color ramp (though a technique similar to contrast stretch could be used to scale the elevation color ramp more intelligently).&lt;/p&gt;
 
@@ -66,7 +66,7 @@ Computing filtered cloud from 3080188 points with mean_k 8, std_dev_mul 2.000000
 &lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pcl_viewer C23745-filtered.pcd
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://chambbj.github.io/images/screenshot-1460048598.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chambbj.github.io/images/screenshot-1460048598.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
 
 &lt;p&gt;As you can see, the outlier removal tool has removed the sky noise points, and the profile view appears to be much cleaner, with a more suitable color ramp.&lt;/p&gt;
 
@@ -86,9 +86,9 @@ Available dimensions: x y z intensity rgba
 
 &lt;p&gt;Below are before and after shots of the same viewpoint, showing the subsampled point cloud created by the voxel grid filter, which is composed of roughly 25% of the original number of points.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://chambbj.github.io/images/screenshot-1460050782.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chambbj.github.io/images/screenshot-1460050782.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://chambbj.github.io/images/screenshot-1460050617.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://chambbj.github.io/images/screenshot-1460050617.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;conclusion:851a220174b07844004569bd9c7b9363&#34;&gt;Conclusion&lt;/h4&gt;
 
@@ -98,10 +98,10 @@ Available dimensions: x y z intensity rgba
     
     <item>
       <title>Crossing the Streams</title>
-      <link>http://chambbj.github.io/post/crossing-the-streams/</link>
+      <link>https://chambbj.github.io/post/crossing-the-streams/</link>
       <pubDate>Mon, 04 Apr 2016 13:49:51 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/post/crossing-the-streams/</guid>
+      <guid>https://chambbj.github.io/post/crossing-the-streams/</guid>
       <description>&lt;p&gt;In January of this year, I was convinced to submit an abstract for &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt;. To my delight, my talk on &lt;a href=&#34;https://2016.foss4g-na.org/session/filtering-point-clouds-pdal-and-pcl&#34;&gt;Filtering point clouds with PDAL and PCL&lt;/a&gt; was accepted. This is a topic that is near and dear to me as an early adopter and contributor to both &lt;a href=&#34;http://pdal.io&#34;&gt;PDAL&lt;/a&gt; and &lt;a href=&#34;http://pointclouds.org&#34;&gt;PCL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;To this day, I find it quite convenient to leverage PCL&amp;rsquo;s extensive collection of &lt;a href=&#34;http://docs.pointclouds.org/1.7.2/modules.html&#34;&gt;modules&lt;/a&gt; when developing new approaches to processing point cloud data. Though the pace of PCL development has slowed (latest &lt;a href=&#34;https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.7.2&#34;&gt;release&lt;/a&gt;, &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/04/03/pcl-tutorial-and-3drp-pcl-workshop-at-ias-2014/&#34;&gt;workshop&lt;/a&gt; and &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/02/12/new-ocular-robotics-pcl-code-sprint/&#34;&gt;code sprint&lt;/a&gt; were all in 2014), there is still a wealth of algorithms that can aid in point cloud processing and analysis tasks. And it is easily &lt;a href=&#34;http://ns50.pointclouds.org/documentation/tutorials/writing_new_classes.php#writing-new-classes&#34;&gt;extensible&lt;/a&gt;.&lt;/p&gt;
@@ -158,10 +158,10 @@ Available dimensions: x y z intensity rgba
     
     <item>
       <title>Publications</title>
-      <link>http://chambbj.github.io/publications/</link>
+      <link>https://chambbj.github.io/publications/</link>
       <pubDate>Tue, 29 Mar 2016 22:56:33 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/publications/</guid>
+      <guid>https://chambbj.github.io/publications/</guid>
       <description>
 
 &lt;h2 id=&#34;print:480c4de99851329b51acecc000e2e84f&#34;&gt;Print&lt;/h2&gt;
@@ -222,10 +222,10 @@ Available dimensions: x y z intensity rgba
     
     <item>
       <title>About</title>
-      <link>http://chambbj.github.io/about/</link>
+      <link>https://chambbj.github.io/about/</link>
       <pubDate>Tue, 29 Mar 2016 15:42:47 -0400</pubDate>
       
-      <guid>http://chambbj.github.io/about/</guid>
+      <guid>https://chambbj.github.io/about/</guid>
       <description>&lt;p&gt;I am a regular committer to &lt;a href=&#34;http://pdal.io&#34;&gt;PDAL&lt;/a&gt; and an occasional contributor to &lt;a href=&#34;http://pointclouds.org&#34;&gt;PCL&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
