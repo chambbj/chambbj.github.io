@@ -11,15 +11,15 @@
     
     <meta property="og:description" content="">
     <meta property="og:url" content="https://chambbj.github.io/post/crossing-the-streams/">
-    <meta property="og:site_name" content="chambbj">
+    <meta property="og:site_name" content="Brad Chambers">
     
-    <meta name="generator" content="Hugo 0.15" />
-    <title>Crossing the Streams &middot; chambbj</title>
+    <meta name="generator" content="Hugo 0.17-DEV" />
+    <title>Crossing the Streams &middot; Brad Chambers</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="https://chambbj.github.io/css/style.css">
-    <link href="" rel="alternate" type="application/rss+xml" title="chambbj" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Brad Chambers" />
 
     
     
@@ -93,7 +93,13 @@
 	</header>
 
 	<article>
+		<script type="text/javascript"
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
 		<p>In January of this year, I was convinced to submit an abstract for <a href="https://2016.foss4g-na.org/">FOSS4G North America 2016</a>. To my delight, my talk on <a href="https://2016.foss4g-na.org/session/filtering-point-clouds-pdal-and-pcl">Filtering point clouds with PDAL and PCL</a> was accepted. This is a topic that is near and dear to me as an early adopter and contributor to both <a href="http://pdal.io">PDAL</a> and <a href="http://pointclouds.org">PCL</a>.</p>
+
+<p></p>
 
 <p>To this day, I find it quite convenient to leverage PCL&rsquo;s extensive collection of <a href="http://docs.pointclouds.org/1.7.2/modules.html">modules</a> when developing new approaches to processing point cloud data. Though the pace of PCL development has slowed (latest <a href="https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.7.2">release</a>, <a href="http://ns50.pointclouds.org/news/2014/04/03/pcl-tutorial-and-3drp-pcl-workshop-at-ias-2014/">workshop</a> and <a href="http://ns50.pointclouds.org/news/2014/02/12/new-ocular-robotics-pcl-code-sprint/">code sprint</a> were all in 2014), there is still a wealth of algorithms that can aid in point cloud processing and analysis tasks. And it is easily <a href="http://ns50.pointclouds.org/documentation/tutorials/writing_new_classes.php#writing-new-classes">extensible</a>.</p>
 
@@ -144,7 +150,6 @@
 <p>While it was at first tempting to either 1) write format drivers for PCL or 2) write the processing algorithms for PDAL, both of these overlook a vital aspect of open source software: <strong>community</strong>. If I were to go with option 1, I&rsquo;d be on an island &ndash; at least initially. The established PCL community already had a <a href="http://pointclouds.org/documentation/tutorials/pcd_file_format.php">format</a>. The same was true for option 2. PDAL&rsquo;s goal in life is really to focus on formats. Sure it would be nice to have many of the PCL algorithms living natively within PDAL, but I don&rsquo;t want to spend the bulk of my time recoding a bunch of algorithms, and it didn&rsquo;t seem there was a body of developers who wanted to jump in on the task with me.</p>
 
 <p>No. What I really want to do is to come up with novel ways of processing the data. Sometimes this will mean writing (or implementing) a <a href="http://www.pdal.io/tutorial/calculating-normalized-heights.html">new</a> or <a href="http://www.pdal.io/tutorial/pcl_ground.html">existing</a> algorithm. Other times it&rsquo;s simply a matter of wiring up existing algorithms in a <a href="http://www.pdal.io/json_pipeline_specification.html#extended-examples">new way</a>. To that end, we&rsquo;ve developed methods for incorporating PCL within PDAL, along with new and intuitive ways to interact with PDAL. Over the coming weeks, my hope is to be able to share with you a number of methods we have developed that bridge the PDAL-PCL divide.</p>
-
 	</article>
 </main>
 

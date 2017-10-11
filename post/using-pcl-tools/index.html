@@ -11,15 +11,15 @@
     
     <meta property="og:description" content="">
     <meta property="og:url" content="https://chambbj.github.io/post/using-pcl-tools/">
-    <meta property="og:site_name" content="chambbj">
+    <meta property="og:site_name" content="Brad Chambers">
     
-    <meta name="generator" content="Hugo 0.15" />
-    <title>Using PCL Tools &middot; chambbj</title>
+    <meta name="generator" content="Hugo 0.17-DEV" />
+    <title>Using PCL Tools &middot; Brad Chambers</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
     <link rel="stylesheet" href="https://chambbj.github.io/css/style.css">
-    <link href="" rel="alternate" type="application/rss+xml" title="chambbj" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Brad Chambers" />
 
     
     
@@ -93,20 +93,24 @@
 	</header>
 
 	<article>
+		<script type="text/javascript"
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
 		
 
 <p>In our introductory <a href="http://chambbj.github.io/post/crossing-the-streams/">post</a> on the topic, we expressed a desire to bring together <a href="http://pdal.io">PDAL</a> and <a href="http://pointclouds.org">PCL</a>. The first step that we took nearly four years ago was to create a <a href="https://github.com/PDAL/PDAL/commit/2ca4ec8556cad9445e87832c36d837e5eedacc1e">writer</a> for the PCD <a href="http://pointclouds.org/documentation/tutorials/pcd_file_format.php">format</a>. Jump forward two years, and we eventually <a href="https://github.com/PDAL/PDAL/commit/cc8e49869c0093b958939f4415b517b575e11ddc">added</a> PCL-backed drivers for both PCD <a href="http://www.pdal.io/stages/readers.pcd.html">reading</a> and <a href="http://www.pdal.io/stages/writers.pcd.html">writing</a>, adding support for not just ASCII data, but binary compressed data as well.</p>
 
 <p>With these drivers in place, we can now take the obvious first step for anybody experimenting with PDAL and PCL &ndash; just convert some data to PCD to use with PCL&rsquo;s command line <a href="https://github.com/PointCloudLibrary/pcl/tree/master/tools">tools</a>. Of course, with PDAL <a href="http://www.pdal.io/apps.html#translate-command">translate</a>, this is a breeze!</p>
 
-<h4 id="step-1-data-prep:851a220174b07844004569bd9c7b9363">Step 1: Data Prep</h4>
+<h4 id="step-1-data-prep">Step 1: Data Prep</h4>
 
 <p>Let&rsquo;s begin by downloading some <a href="http://www.wvview.org/data/lidar/SouthernWV/Comprehensive/C23745.las">data</a> from <a href="http://www.wvview.org/">WVView</a>. We can transcode this to binary compressed PCD using the command:</p>
 
 <pre><code class="language-console">$ pdal translate C23745.las C23745.pcd --writers.pcd.compression=true
 </code></pre>
 
-<h4 id="step-2-outlier-removal:851a220174b07844004569bd9c7b9363">Step 2: Outlier Removal</h4>
+<h4 id="step-2-outlier-removal">Step 2: Outlier Removal</h4>
 
 <p>Now, let&rsquo;s take a look at the point cloud using <code>pcl_viewer</code>.</p>
 
@@ -136,7 +140,7 @@ Computing filtered cloud from 3080188 points with mean_k 8, std_dev_mul 2.000000
 
 <p>As you can see, the outlier removal tool has removed the sky noise points, and the profile view appears to be much cleaner, with a more suitable color ramp.</p>
 
-<h4 id="step-3-subsampling:851a220174b07844004569bd9c7b9363">Step 3: Subsampling</h4>
+<h4 id="step-3-subsampling">Step 3: Subsampling</h4>
 
 <p>PCL&rsquo;s voxel grid filter can be used to subsample the data, by replacing all points within a three-dimensional voxel with the centroid of the points in that voxel. The leaf size here specifies the edge length of the voxel. (Note: The choice to subsample in this manner is destructive, and the data density will be reduced. This may or may not be desirable depending on your application.)</p>
 
@@ -156,7 +160,7 @@ Available dimensions: x y z intensity rgba
 
 <p><img src="/images/screenshot-1460050617.png" style="width: 400px;"/></p>
 
-<h4 id="conclusion:851a220174b07844004569bd9c7b9363">Conclusion</h4>
+<h4 id="conclusion">Conclusion</h4>
 
 <p>Although this is a very loose integration of PCL and PDAL, we have begun to show how the two libraries can be used in tandem for data analysis and exploitation. In future posts, I will provide more details on how the conversions between PDAL and PCL take place and how PCL modules have been embedded directly into PDAL for more flexible and advanced processing workflows.</p>
 

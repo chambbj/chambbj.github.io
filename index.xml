@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>chambbj</title>
-    <link>https://chambbj.github.io/</link>
-    <description>Recent content on chambbj</description>
+    <title>Brad Chambers</title>
+    <link>https://chambbj.github.io/index.xml</link>
+    <description>Recent content on Brad Chambers</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 May 2016 13:24:21 -0400</lastBuildDate>
@@ -33,14 +33,14 @@
 
 &lt;p&gt;With these drivers in place, we can now take the obvious first step for anybody experimenting with PDAL and PCL &amp;ndash; just convert some data to PCD to use with PCL&amp;rsquo;s command line &lt;a href=&#34;https://github.com/PointCloudLibrary/pcl/tree/master/tools&#34;&gt;tools&lt;/a&gt;. Of course, with PDAL &lt;a href=&#34;http://www.pdal.io/apps.html#translate-command&#34;&gt;translate&lt;/a&gt;, this is a breeze!&lt;/p&gt;
 
-&lt;h4 id=&#34;step-1-data-prep:851a220174b07844004569bd9c7b9363&#34;&gt;Step 1: Data Prep&lt;/h4&gt;
+&lt;h4 id=&#34;step-1-data-prep&#34;&gt;Step 1: Data Prep&lt;/h4&gt;
 
 &lt;p&gt;Let&amp;rsquo;s begin by downloading some &lt;a href=&#34;http://www.wvview.org/data/lidar/SouthernWV/Comprehensive/C23745.las&#34;&gt;data&lt;/a&gt; from &lt;a href=&#34;http://www.wvview.org/&#34;&gt;WVView&lt;/a&gt;. We can transcode this to binary compressed PCD using the command:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-console&#34;&gt;$ pdal translate C23745.las C23745.pcd --writers.pcd.compression=true
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;step-2-outlier-removal:851a220174b07844004569bd9c7b9363&#34;&gt;Step 2: Outlier Removal&lt;/h4&gt;
+&lt;h4 id=&#34;step-2-outlier-removal&#34;&gt;Step 2: Outlier Removal&lt;/h4&gt;
 
 &lt;p&gt;Now, let&amp;rsquo;s take a look at the point cloud using &lt;code&gt;pcl_viewer&lt;/code&gt;.&lt;/p&gt;
 
@@ -70,7 +70,7 @@ Computing filtered cloud from 3080188 points with mean_k 8, std_dev_mul 2.000000
 
 &lt;p&gt;As you can see, the outlier removal tool has removed the sky noise points, and the profile view appears to be much cleaner, with a more suitable color ramp.&lt;/p&gt;
 
-&lt;h4 id=&#34;step-3-subsampling:851a220174b07844004569bd9c7b9363&#34;&gt;Step 3: Subsampling&lt;/h4&gt;
+&lt;h4 id=&#34;step-3-subsampling&#34;&gt;Step 3: Subsampling&lt;/h4&gt;
 
 &lt;p&gt;PCL&amp;rsquo;s voxel grid filter can be used to subsample the data, by replacing all points within a three-dimensional voxel with the centroid of the points in that voxel. The leaf size here specifies the edge length of the voxel. (Note: The choice to subsample in this manner is destructive, and the data density will be reduced. This may or may not be desirable depending on your application.)&lt;/p&gt;
 
@@ -90,7 +90,7 @@ Available dimensions: x y z intensity rgba
 
 &lt;p&gt;&lt;img src=&#34;https://chambbj.github.io/images/screenshot-1460050617.png&#34; style=&#34;width: 400px;&#34;/&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;conclusion:851a220174b07844004569bd9c7b9363&#34;&gt;Conclusion&lt;/h4&gt;
+&lt;h4 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h4&gt;
 
 &lt;p&gt;Although this is a very loose integration of PCL and PDAL, we have begun to show how the two libraries can be used in tandem for data analysis and exploitation. In future posts, I will provide more details on how the conversions between PDAL and PCL take place and how PCL modules have been embedded directly into PDAL for more flexible and advanced processing workflows.&lt;/p&gt;
 </description>
@@ -103,6 +103,8 @@ Available dimensions: x y z intensity rgba
       
       <guid>https://chambbj.github.io/post/crossing-the-streams/</guid>
       <description>&lt;p&gt;In January of this year, I was convinced to submit an abstract for &lt;a href=&#34;https://2016.foss4g-na.org/&#34;&gt;FOSS4G North America 2016&lt;/a&gt;. To my delight, my talk on &lt;a href=&#34;https://2016.foss4g-na.org/session/filtering-point-clouds-pdal-and-pcl&#34;&gt;Filtering point clouds with PDAL and PCL&lt;/a&gt; was accepted. This is a topic that is near and dear to me as an early adopter and contributor to both &lt;a href=&#34;http://pdal.io&#34;&gt;PDAL&lt;/a&gt; and &lt;a href=&#34;http://pointclouds.org&#34;&gt;PCL&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;To this day, I find it quite convenient to leverage PCL&amp;rsquo;s extensive collection of &lt;a href=&#34;http://docs.pointclouds.org/1.7.2/modules.html&#34;&gt;modules&lt;/a&gt; when developing new approaches to processing point cloud data. Though the pace of PCL development has slowed (latest &lt;a href=&#34;https://github.com/PointCloudLibrary/pcl/releases/tag/pcl-1.7.2&#34;&gt;release&lt;/a&gt;, &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/04/03/pcl-tutorial-and-3drp-pcl-workshop-at-ias-2014/&#34;&gt;workshop&lt;/a&gt; and &lt;a href=&#34;http://ns50.pointclouds.org/news/2014/02/12/new-ocular-robotics-pcl-code-sprint/&#34;&gt;code sprint&lt;/a&gt; were all in 2014), there is still a wealth of algorithms that can aid in point cloud processing and analysis tasks. And it is easily &lt;a href=&#34;http://ns50.pointclouds.org/documentation/tutorials/writing_new_classes.php#writing-new-classes&#34;&gt;extensible&lt;/a&gt;.&lt;/p&gt;
 
@@ -152,8 +154,7 @@ Available dimensions: x y z intensity rgba
 
 &lt;p&gt;While it was at first tempting to either 1) write format drivers for PCL or 2) write the processing algorithms for PDAL, both of these overlook a vital aspect of open source software: &lt;strong&gt;community&lt;/strong&gt;. If I were to go with option 1, I&amp;rsquo;d be on an island &amp;ndash; at least initially. The established PCL community already had a &lt;a href=&#34;http://pointclouds.org/documentation/tutorials/pcd_file_format.php&#34;&gt;format&lt;/a&gt;. The same was true for option 2. PDAL&amp;rsquo;s goal in life is really to focus on formats. Sure it would be nice to have many of the PCL algorithms living natively within PDAL, but I don&amp;rsquo;t want to spend the bulk of my time recoding a bunch of algorithms, and it didn&amp;rsquo;t seem there was a body of developers who wanted to jump in on the task with me.&lt;/p&gt;
 
-&lt;p&gt;No. What I really want to do is to come up with novel ways of processing the data. Sometimes this will mean writing (or implementing) a &lt;a href=&#34;http://www.pdal.io/tutorial/calculating-normalized-heights.html&#34;&gt;new&lt;/a&gt; or &lt;a href=&#34;http://www.pdal.io/tutorial/pcl_ground.html&#34;&gt;existing&lt;/a&gt; algorithm. Other times it&amp;rsquo;s simply a matter of wiring up existing algorithms in a &lt;a href=&#34;http://www.pdal.io/json_pipeline_specification.html#extended-examples&#34;&gt;new way&lt;/a&gt;. To that end, we&amp;rsquo;ve developed methods for incorporating PCL within PDAL, along with new and intuitive ways to interact with PDAL. Over the coming weeks, my hope is to be able to share with you a number of methods we have developed that bridge the PDAL-PCL divide.&lt;/p&gt;
-</description>
+&lt;p&gt;No. What I really want to do is to come up with novel ways of processing the data. Sometimes this will mean writing (or implementing) a &lt;a href=&#34;http://www.pdal.io/tutorial/calculating-normalized-heights.html&#34;&gt;new&lt;/a&gt; or &lt;a href=&#34;http://www.pdal.io/tutorial/pcl_ground.html&#34;&gt;existing&lt;/a&gt; algorithm. Other times it&amp;rsquo;s simply a matter of wiring up existing algorithms in a &lt;a href=&#34;http://www.pdal.io/json_pipeline_specification.html#extended-examples&#34;&gt;new way&lt;/a&gt;. To that end, we&amp;rsquo;ve developed methods for incorporating PCL within PDAL, along with new and intuitive ways to interact with PDAL. Over the coming weeks, my hope is to be able to share with you a number of methods we have developed that bridge the PDAL-PCL divide.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -164,7 +165,7 @@ Available dimensions: x y z intensity rgba
       <guid>https://chambbj.github.io/publications/</guid>
       <description>
 
-&lt;h2 id=&#34;print:480c4de99851329b51acecc000e2e84f&#34;&gt;Print&lt;/h2&gt;
+&lt;h2 id=&#34;print&#34;&gt;Print&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:ULOm3_A8WrAC&#34;&gt;B. Chambers, J. Durand, N. Gans, and S. Hutchinson, “Dynamic feature point allocation using multiresolutional critical-point filters,” in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504–509.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -178,15 +179,15 @@ Available dimensions: x y z intensity rgba
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=QEN4BUQAAAAJ&amp;amp;citation_for_view=QEN4BUQAAAAJ:u-x6o8ySG0sC&#34;&gt;R. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, “Efficient structures for image decomposition using directional filter banks,” in Proc. SPIE 6566, 65660Y, Apr. 2007.&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;presentations:480c4de99851329b51acecc000e2e84f&#34;&gt;Presentations&lt;/h2&gt;
+&lt;h2 id=&#34;presentations&#34;&gt;Presentations&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://mil-oss.org/resources/mil-oss-wg4-open-souce-lidar-software-bchambers.pdf&#34;&gt;B. Chambers, &amp;ldquo;Open Source Lidar Software,&amp;rdquo; Mil-OSS WG4, Oct. 2012.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;online:480c4de99851329b51acecc000e2e84f&#34;&gt;Online&lt;/h2&gt;
+&lt;h2 id=&#34;online&#34;&gt;Online&lt;/h2&gt;
 
-&lt;h3 id=&#34;pdal:480c4de99851329b51acecc000e2e84f&#34;&gt;PDAL&lt;/h3&gt;
+&lt;h3 id=&#34;pdal&#34;&gt;PDAL&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.pdal.io/tutorial/using.html&#34;&gt;Using PDAL with CMake&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -212,7 +213,7 @@ Available dimensions: x y z intensity rgba
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.pdal.io/tutorial/writing-writer.html&#34;&gt;Writing a writer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;pcl:480c4de99851329b51acecc000e2e84f&#34;&gt;PCL&lt;/h3&gt;
+&lt;h3 id=&#34;pcl&#34;&gt;PCL&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://pointclouds.org/documentation/tutorials/progressive_morphological_filtering.php#progressive-morphological-filtering&#34;&gt;Identifying ground returns using ProgressiveMorphologicalFilter segmentation&lt;/a&gt;&lt;/li&gt;
