@@ -2,38 +2,28 @@
     "docs": [
         {
             "location": "/",
-            "text": "I am a regular committer to \nPDAL\n and an occasional contributor to \nPCL\n.",
+            "text": "I am a regular committer to \nPDAL\n and an occasional contributor to \nPCL\n.\n\n\nMedium Posts\n\n\n\n\nCrossing the Streams\n\n\nUsing PCL Tools\n\n\nFOSS4G-NA 2016\n\n\nPDAL at the OSGeo Code Sprint\n\n\n\n\nPrint\n\n\n\n\n\n\nB. Chambers, J. Durand, N. Gans, and S. Hutchinson, \u201cDynamic feature point allocation using multiresolutional critical-point filters,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504\u2013509.\n\n\n\n\n\n\nB. Chambers, \u201cPoint- and window-based matching in images using critical-point filters,\u201d M.S. thesis, Department of Electrical Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, 2004.\n\n\n\n\n\n\nB. Chambers and S. Hutchinson, \u201cIntegrated tracking and control using condensation-based critical-point matching,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2004, pp. 949\u2013956.\n\n\n\n\n\n\nB. Chambers, R. Ansari, D. Campbell, and W. Reynolds, \u201cWavelet-based target detection using multiscale directional analysis,\u201d in Proc. SPIE 6566, 656608, Apr. 2007.\n\n\n\n\n\n\nR. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, \u201cEfficient structures for image decomposition using directional filter banks,\u201d in Proc. SPIE 6566, 65660Y, Apr. 2007.\n\n\n\n\n\n\nPresentations\n\n\n\n\nB. Chambers, \"PDAL Algorithm Development Deep Dive,\" FOSS4G-NA 2018, May 2018.\n (\nslides\n) (\nbinder\n)\n\n\nB. Chambers, \"Point Cloud Filters & Pipelines in PDAL,\" FOSS4G 2017, Aug. 2017\n (\nvideo\n)\n\n\nB. Chambers, \"Filtering point clouds with PDAL and PCL,\" FOSS4G-NA 2016, May. 2016\n (\nslides\n)\n\n\nB. Chambers, \"Open Source Lidar Software,\" Mil-OSS WG4, Oct. 2012.\n\n\n\n\nTutorials\n\n\n\n\n\n\nUsing PDAL with CMake\n\n\n\n\n\n\nReading with PDAL\n\n\n\n\n\n\nWriting with PDAL\n\n\n\n\n\n\nFiltering data with PCL\n\n\n\n\n\n\nIdentifying ground returns using ProgressiveMorphologicalFilter segmentation\n\n\n\n\n\n\nGround Filter Tutorial\n\n\n\n\n\n\nCalculating Normalized Heights\n\n\n\n\n\n\nPerforming Poisson Sampling of Point Clouds Using Dart Throwing\n\n\n\n\n\n\nWriting a filter\n\n\n\n\n\n\nWriting a kernel\n\n\n\n\n\n\nWriting a reader\n\n\n\n\n\n\nWriting a writer",
             "title": "Home"
         },
         {
-            "location": "/publications/",
-            "text": "Print\n\n\n\n\n\n\nB. Chambers, J. Durand, N. Gans, and S. Hutchinson, \u201cDynamic feature point allocation using multiresolutional critical-point filters,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504\u2013509.\n\n\n\n\n\n\nB. Chambers, \u201cPoint- and window-based matching in images using critical-point filters,\u201d M.S. thesis, Department of Electrical Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, 2004.\n\n\n\n\n\n\nB. Chambers and S. Hutchinson, \u201cIntegrated tracking and control using condensation-based critical-point matching,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2004, pp. 949\u2013956.\n\n\n\n\n\n\nB. Chambers, R. Ansari, D. Campbell, and W. Reynolds, \u201cWavelet-based target detection using multiscale directional analysis,\u201d in Proc. SPIE 6566, 656608, Apr. 2007.\n\n\n\n\n\n\nR. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, \u201cEfficient structures for image decomposition using directional filter banks,\u201d in Proc. SPIE 6566, 65660Y, Apr. 2007.\n\n\n\n\n\n\nPresentations\n\n\n\n\nB. Chambers, \"Open Source Lidar Software,\" Mil-OSS WG4, Oct. 2012.\n\n\n\n\nOnline\n\n\nPDAL\n\n\n\n\n\n\nUsing PDAL with CMake\n\n\n\n\n\n\nReading with PDAL\n\n\n\n\n\n\nWriting with PDAL\n\n\n\n\n\n\nFiltering data with PCL\n\n\n\n\n\n\nIdentifying ground returns using ProgressiveMorphologicalFilter segmentation\n\n\n\n\n\n\nCalculating Normalized Heights\n\n\n\n\n\n\nPerforming Poisson Sampling of Point Clouds Using Dart Throwing\n\n\n\n\n\n\nWriting a filter\n\n\n\n\n\n\nWriting a kernel\n\n\n\n\n\n\nWriting a reader\n\n\n\n\n\n\nWriting a writer\n\n\n\n\n\n\nPCL\n\n\n\n\nIdentifying ground returns using ProgressiveMorphologicalFilter segmentation",
-            "title": "Publications"
+            "location": "/#medium-posts",
+            "text": "Crossing the Streams  Using PCL Tools  FOSS4G-NA 2016  PDAL at the OSGeo Code Sprint",
+            "title": "Medium Posts"
         },
         {
-            "location": "/publications/#print",
+            "location": "/#print",
             "text": "B. Chambers, J. Durand, N. Gans, and S. Hutchinson, \u201cDynamic feature point allocation using multiresolutional critical-point filters,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2003, pp. 504\u2013509.    B. Chambers, \u201cPoint- and window-based matching in images using critical-point filters,\u201d M.S. thesis, Department of Electrical Engineering, University of Illinois at Urbana-Champaign, Urbana, IL, 2004.    B. Chambers and S. Hutchinson, \u201cIntegrated tracking and control using condensation-based critical-point matching,\u201d in Proc. IEEE/RSJ Int. Conf. Intelligent Robots and Systems, Oct. 2004, pp. 949\u2013956.    B. Chambers, R. Ansari, D. Campbell, and W. Reynolds, \u201cWavelet-based target detection using multiscale directional analysis,\u201d in Proc. SPIE 6566, 656608, Apr. 2007.    R. Ansari, D. Fennell, A. Bagci, W. Reynolds, and B. Chambers, \u201cEfficient structures for image decomposition using directional filter banks,\u201d in Proc. SPIE 6566, 65660Y, Apr. 2007.",
             "title": "Print"
         },
         {
-            "location": "/publications/#presentations",
-            "text": "B. Chambers, \"Open Source Lidar Software,\" Mil-OSS WG4, Oct. 2012.",
+            "location": "/#presentations",
+            "text": "B. Chambers, \"PDAL Algorithm Development Deep Dive,\" FOSS4G-NA 2018, May 2018.  ( slides ) ( binder )  B. Chambers, \"Point Cloud Filters & Pipelines in PDAL,\" FOSS4G 2017, Aug. 2017  ( video )  B. Chambers, \"Filtering point clouds with PDAL and PCL,\" FOSS4G-NA 2016, May. 2016  ( slides )  B. Chambers, \"Open Source Lidar Software,\" Mil-OSS WG4, Oct. 2012.",
             "title": "Presentations"
         },
         {
-            "location": "/publications/#online",
-            "text": "",
-            "title": "Online"
-        },
-        {
-            "location": "/publications/#pdal",
-            "text": "Using PDAL with CMake    Reading with PDAL    Writing with PDAL    Filtering data with PCL    Identifying ground returns using ProgressiveMorphologicalFilter segmentation    Calculating Normalized Heights    Performing Poisson Sampling of Point Clouds Using Dart Throwing    Writing a filter    Writing a kernel    Writing a reader    Writing a writer",
-            "title": "PDAL"
-        },
-        {
-            "location": "/publications/#pcl",
-            "text": "Identifying ground returns using ProgressiveMorphologicalFilter segmentation",
-            "title": "PCL"
+            "location": "/#tutorials",
+            "text": "Using PDAL with CMake    Reading with PDAL    Writing with PDAL    Filtering data with PCL    Identifying ground returns using ProgressiveMorphologicalFilter segmentation    Ground Filter Tutorial    Calculating Normalized Heights    Performing Poisson Sampling of Point Clouds Using Dart Throwing    Writing a filter    Writing a kernel    Writing a reader    Writing a writer",
+            "title": "Tutorials"
         },
         {
             "location": "/post/crossing-the-streams/",
